@@ -1,0 +1,28 @@
+.yt-wrap { max-width:480px; margin:0; }
+.yt-box  { position:relative; cursor:pointer; display:block; }
+.yt-thumb { width:100%; height:auto; display:block; }
+
+/* play circle */
+.yt-box::before{
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  width:56px; height:56px;
+  border-radius:50%;
+  background:rgba(0,0,0,.5);
+  pointer-events:none;
+}
+
+/* play triangle */
+.yt-box::after{
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-36%,-50%);
+  width:0; height:0;
+  border-left:16px solid #fff;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  pointer-events:none;
+}
